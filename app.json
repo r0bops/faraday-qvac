@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "Faraday",
+    "slug": "faraday",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "faraday",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a0a0a"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "io.faraday.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#0a0a0a"
+      },
+      "package": "io.faraday.app"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 29
+          }
+        }
+      ],
+      "@qvac/sdk/expo-plugin",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Faraday to capture documents for OCR."
+        }
+      ],
+      [
+        "@siteed/audio-studio",
+        {
+          "microphonePermission": "Allow Faraday to record interviews."
+        }
+      ],
+      "./plugins/strip-internet-permission.js"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

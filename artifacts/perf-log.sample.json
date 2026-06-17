@@ -1,0 +1,71 @@
+{
+  "description": "Sample perf-log from a Faraday demo run. Generated automatically by src/lib/log.ts. Each entry records an inference or model operation with timing stats from QVAC SDK run.final.stats.",
+  "generatedAt": "UNIX_TIMESTAMP_PLACEHOLDER",
+  "sample_entries": [
+    {
+      "capability": "client",
+      "event": "init",
+      "ts": null
+    },
+    {
+      "capability": "modelManager",
+      "event": "load",
+      "modelId": "LLAMA_3_2_1B_INST_Q4_0",
+      "modelType": "llm",
+      "sizeBytes": 700000000,
+      "loadMs": null,
+      "ts": null
+    },
+    {
+      "capability": "whisper",
+      "event": "transcribe",
+      "modelId": "WHISPER_TINY_Q8_0",
+      "textLength": null,
+      "durationMs": null,
+      "ts": null
+    },
+    {
+      "capability": "nmt",
+      "event": "translate",
+      "modelId": "BERGAMOT_AR_EN",
+      "from": "ar",
+      "to": "en",
+      "inputLength": null,
+      "outputLength": null,
+      "durationMs": null,
+      "ts": null
+    },
+    {
+      "capability": "llm",
+      "event": "completionStructured",
+      "modelId": "LLAMA_3_2_1B_INST_Q4_0",
+      "promptTokens": null,
+      "generatedTokens": null,
+      "ttftMs": null,
+      "tokensPerSec": null,
+      "ts": null
+    },
+    {
+      "capability": "llm",
+      "event": "completion",
+      "modelId": "LLAMA_3_2_1B_INST_Q4_0",
+      "promptTokens": null,
+      "generatedTokens": null,
+      "ttftMs": null,
+      "tokensPerSec": null,
+      "ts": null
+    },
+    {
+      "capability": "modelManager",
+      "event": "unload",
+      "modelId": "LLAMA_3_2_1B_INST_Q4_0",
+      "ts": null
+    }
+  ],
+  "metrics_defined": {
+    "timeToFirstToken_ms": "Milliseconds from completion call to first token (from QVAC stats.timeToFirstToken)",
+    "tokensPerSecond": "Generation speed after first token (from QVAC stats.tokensPerSecond)",
+    "promptTokens": "Input token count (from QVAC stats.promptTokens)",
+    "generatedTokens": "Output token count (from QVAC stats.generatedTokens)"
+  }
+}

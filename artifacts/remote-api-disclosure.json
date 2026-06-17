@@ -1,0 +1,16 @@
+{
+  "build": "dev",
+  "disclosure": "This file lists every remote API call Faraday makes. In the dev build, the ONLY remote calls are one-time model downloads from Hugging Face (open weights, no user data transmitted). In the evidence build (EVIDENCE_BUILD=true), ALL model weights are sideloaded, the android.permission.INTERNET permission is removed from the manifest by the strip-internet-permission config plugin, and the JS egress trap blocks fetch/XHR. Zero remote API calls occur in the evidence build.",
+  "api_calls": [
+    {
+      "service": "Hugging Face Hub",
+      "endpoint": "https://huggingface.co/qvac/models/resolve/main/*",
+      "method": "GET",
+      "purpose": "One-time model weight download (dev build only)",
+      "auth_required": false,
+      "user_data_transmitted": false,
+      "evidence_build": "NOT USED — models are sideloaded"
+    }
+  ],
+  "evidence_build_remote_api_calls": []
+}

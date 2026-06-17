@@ -1,0 +1,49 @@
+{
+  "name": "faraday",
+  "version": "1.0.0",
+  "private": true,
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "prebuild": "expo prebuild",
+    "lint": "tsc --noEmit",
+    "evidence:dev": "EVIDENCE_BUILD=true npx expo prebuild --clean && npx expo run:android --device"
+  },
+  "dependencies": {
+    "@noble/ciphers": "^2.2.0",
+    "@qvac/sdk": "^0.13.3",
+    "@siteed/audio-studio": "^3.2.0",
+    "@siteed/expo-audio-studio": "^3.2.1",
+    "expo": "~54.0.34",
+    "expo-audio": "~1.1.1",
+    "expo-build-properties": "~0.14.8",
+    "expo-camera": "~17.0.10",
+    "expo-constants": "~18.0.13",
+    "expo-crypto": "~14.1.5",
+    "expo-device": "~8.0.10",
+    "expo-document-picker": "~14.0.8",
+    "expo-file-system": "~19.0.23",
+    "expo-linking": "~8.0.12",
+    "expo-router": "~6.0.24",
+    "expo-secure-store": "~15.0.8",
+    "expo-sharing": "~14.0.4",
+    "expo-status-bar": "~3.0.9",
+    "react": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-bare-kit": "^0.11.5",
+    "react-native-gesture-handler": "~2.20.0",
+    "react-native-reanimated": "~4.1.1",
+    "react-native-safe-area-context": "~5.4.0",
+    "react-native-screens": "~4.10.0",
+    "react-native-worklets": "0.5.1",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "~19.1.0",
+    "babel-preset-expo": "^54.0.11",
+    "typescript": "~5.7.0"
+  }
+}
