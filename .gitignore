@@ -50,3 +50,7 @@ yarn-error.*
 !.vscode/extensions.json
 .DS_Store
 *.pem
+
+# Ignore markdown files (keep README for submission)
+*.md
+!README.md
